@@ -1,0 +1,78 @@
+<h2>Hero layout</h2>
+<p class="subtitle">All three use the Spotify dark + green palette. Pick the layout that feels right.</p>
+
+<div class="cards">
+
+  <!-- A: Centered, full-height -->
+  <div class="card" data-choice="centered" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f0f;padding:0;border-radius:8px 8px 0 0;min-height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(29,185,84,0.18),transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+      <div style="text-align:center;position:relative;padding:24px;">
+        <div style="width:36px;height:36px;background:#1DB954;border-radius:8px;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;">
+          <span style="color:#000;font-size:18px;font-weight:900;">W</span>
+        </div>
+        <div style="color:#b3b3b3;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Workout Tracker</div>
+        <div style="color:#fff;font-size:22px;font-weight:900;line-height:1.1;margin-bottom:12px;">Track every lift.<br>Own every PR.</div>
+        <div style="background:#1DB954;color:#000;font-weight:700;font-size:12px;padding:8px 20px;border-radius:50px;display:inline-block;">Start Workout</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A — Centered</h3>
+      <p>Full-height centered hero. Logo, tagline, single CTA. Pure focus, very Spotify.</p>
+    </div>
+  </div>
+
+  <!-- B: Left-aligned, split -->
+  <div class="card" data-choice="split" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0f0f0f;padding:20px;border-radius:8px 8px 0 0;min-height:200px;display:flex;align-items:center;gap:16px;overflow:hidden;">
+      <div style="flex:1;min-width:0;">
+        <div style="color:#1DB954;font-size:9px;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px;">Your gym. Your data.</div>
+        <div style="color:#fff;font-size:18px;font-weight:900;line-height:1.15;margin-bottom:10px;">Track every lift.<br>Own every PR.</div>
+        <div style="color:#b3b3b3;font-size:11px;margin-bottom:14px;line-height:1.5;">Log sets, track 1RMs, and watch your strength compound over time.</div>
+        <div style="background:#1DB954;color:#000;font-weight:700;font-size:11px;padding:7px 16px;border-radius:50px;display:inline-block;">Start Workout →</div>
+      </div>
+      <div style="flex:0 0 90px;">
+        <div style="background:#1a1a1a;border-radius:10px;padding:10px;border:1px solid #282828;">
+          <div style="color:#1DB954;font-size:8px;margin-bottom:4px;text-transform:uppercase;letter-spacing:1px;">Top 1RM</div>
+          <div style="color:#fff;font-size:16px;font-weight:900;">142 kg</div>
+          <div style="color:#b3b3b3;font-size:9px;">Squat</div>
+          <div style="margin-top:8px;display:flex;align-items:flex-end;gap:3px;height:28px;">
+            <div style="flex:1;background:#282828;border-radius:2px;height:40%;"></div>
+            <div style="flex:1;background:#282828;border-radius:2px;height:65%;"></div>
+            <div style="flex:1;background:#282828;border-radius:2px;height:50%;"></div>
+            <div style="flex:1;background:#1DB954;border-radius:2px;height:100%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B — Split</h3>
+      <p>Text left, mini stats widget right. More context, shows what the app does.</p>
+    </div>
+  </div>
+
+  <!-- C: Full-screen immersive -->
+  <div class="card" data-choice="immersive" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#000;padding:0;border-radius:8px 8px 0 0;min-height:200px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(29,185,84,0.08) 0%,transparent 60%);"></div>
+      <div style="position:absolute;top:16px;left:50%;transform:translateX(-50%);display:flex;gap:20px;">
+        <span style="color:#b3b3b3;font-size:9px;letter-spacing:1px;">EXERCISES</span>
+        <span style="color:#b3b3b3;font-size:9px;letter-spacing:1px;">PROGRESS</span>
+        <span style="color:#b3b3b3;font-size:9px;letter-spacing:1px;">ROUTINES</span>
+      </div>
+      <div style="position:relative;padding:20px;">
+        <div style="color:#fff;font-size:24px;font-weight:900;line-height:1.05;margin-bottom:6px;">Track every lift.</div>
+        <div style="color:#1DB954;font-size:24px;font-weight:900;line-height:1.05;margin-bottom:14px;">Own every PR.</div>
+        <div style="display:flex;gap:10px;align-items:center;">
+          <div style="background:#1DB954;color:#000;font-weight:700;font-size:11px;padding:8px 18px;border-radius:50px;">Start Workout</div>
+          <div style="color:#b3b3b3;font-size:11px;">or resume session →</div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>C — Immersive</h3>
+      <p>Full-screen dark with green glow. Nav at top, bold two-line tagline, bottom CTA. Maximum impact.</p>
+    </div>
+  </div>
+
+</div>

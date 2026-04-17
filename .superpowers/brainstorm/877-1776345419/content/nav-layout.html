@@ -1,0 +1,77 @@
+<h2>App Navigation Layout</h2>
+<p class="subtitle">Which navigation structure fits how you'll use the app day-to-day?</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Bottom Tab Bar (Mobile-first)</h3>
+      <p>Fixed tabs at the bottom: Dashboard · Log · Exercises · Progress</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-body" style="padding:0;overflow:hidden;border-radius:6px">
+          <div style="background:#1a1a2e;height:160px;display:flex;flex-direction:column;justify-content:space-between">
+            <div style="padding:16px;color:#e2e8f0;font-size:13px;font-weight:600">Dashboard</div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);background:#0f0f23;border-top:1px solid #2d2d4e">
+              <div style="padding:10px 4px;text-align:center;color:#6366f1;font-size:10px">📊<br>Dashboard</div>
+              <div style="padding:10px 4px;text-align:center;color:#64748b;font-size:10px">➕<br>Log</div>
+              <div style="padding:10px 4px;text-align:center;color:#64748b;font-size:10px">🏋️<br>Exercises</div>
+              <div style="padding:10px 4px;text-align:center;color:#64748b;font-size:10px">📈<br>Progress</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>Thumb-friendly on mobile</li><li>Always visible navigation</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Feels cramped on desktop</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Sidebar (Desktop-first)</h3>
+      <p>Collapsible left sidebar with full labels; main content takes the rest</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-body" style="padding:0;overflow:hidden;border-radius:6px">
+          <div style="background:#1a1a2e;height:160px;display:flex">
+            <div style="width:130px;background:#0f0f23;border-right:1px solid #2d2d4e;padding:12px 8px;display:flex;flex-direction:column;gap:6px">
+              <div style="color:#6366f1;font-size:11px;font-weight:700;padding:4px 6px">💪 FitTrack</div>
+              <div style="color:#6366f1;background:#1e1e3f;border-radius:4px;font-size:10px;padding:5px 8px">📊 Dashboard</div>
+              <div style="color:#64748b;font-size:10px;padding:5px 8px">➕ Log Workout</div>
+              <div style="color:#64748b;font-size:10px;padding:5px 8px">🏋️ Exercises</div>
+              <div style="color:#64748b;font-size:10px;padding:5px 8px">📅 Routines</div>
+              <div style="color:#64748b;font-size:10px;padding:5px 8px">📈 Progress</div>
+            </div>
+            <div style="flex:1;padding:12px;color:#94a3b8;font-size:11px">Main content area</div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>More nav items visible</li><li>Great on desktop</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>Takes space on mobile</li></ul></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>Responsive Hybrid</h3>
+      <p>Sidebar on desktop, bottom tabs on mobile — best of both</p>
+      <div class="mockup" style="margin-top:12px">
+        <div class="mockup-body" style="padding:8px;border-radius:6px;background:#0f0f23">
+          <div style="color:#6366f1;font-size:10px;text-align:center;margin-bottom:4px">Desktop → sidebar &nbsp;|&nbsp; Mobile → bottom tabs</div>
+          <div style="display:flex;gap:8px">
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;padding:6px;font-size:9px;color:#94a3b8">🖥 Sidebar layout</div>
+            <div style="flex:1;background:#1a1a2e;border-radius:4px;padding:6px;font-size:9px;color:#94a3b8">📱 Tab bar layout</div>
+          </div>
+        </div>
+      </div>
+      <div class="pros-cons" style="margin-top:8px">
+        <div class="pros"><h4>Pros</h4><ul><li>Works well everywhere</li><li>Professional feel</li></ul></div>
+        <div class="cons"><h4>Cons</h4><ul><li>More CSS complexity</li></ul></div>
+      </div>
+    </div>
+  </div>
+</div>
