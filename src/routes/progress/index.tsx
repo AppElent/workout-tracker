@@ -104,10 +104,11 @@ function ExerciseCharts({ exerciseId }: { exerciseId: Id<'exercises'> }) {
               />
               <Tooltip
                 {...tooltipStyle}
-                formatter={(value: number, _: string, entry: { payload: { source: string } }) => [
-                  `${value} kg (${entry.payload.source})`,
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                formatter={((value: number | undefined, _: string, entry: { payload: { source: string } }) => [
+                  `${value ?? ''} kg (${entry.payload.source})`,
                   '1RM',
-                ]}
+                ]) as any}
               />
               <Line
                 type="monotone"
@@ -150,7 +151,8 @@ function ExerciseCharts({ exerciseId }: { exerciseId: Id<'exercises'> }) {
               />
               <Tooltip
                 {...tooltipStyle}
-                formatter={(value: number) => [`${value} kg`, 'Volume']}
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                formatter={((value: number | undefined) => [`${value ?? ''} kg`, 'Volume']) as any}
               />
               <Bar dataKey="volume" fill="#1DB954" radius={[4, 4, 0, 0]} maxBarSize={40} />
             </BarChart>

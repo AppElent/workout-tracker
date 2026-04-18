@@ -126,10 +126,11 @@ function ExerciseDetailPage() {
                   color: '#fff',
                   fontSize: 12,
                 }}
-                formatter={(value: number, _: string, entry: { payload: { source: string } }) => [
-                  `${value} kg (${entry.payload.source})`,
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                formatter={((value: number | undefined, _: string, entry: { payload: { source: string } }) => [
+                  `${value ?? ''} kg (${entry.payload.source})`,
                   '1RM',
-                ]}
+                ]) as any}
               />
               <Line
                 type="monotone"

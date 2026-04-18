@@ -1,8 +1,8 @@
 import { useConvexConnectionState } from 'convex/react';
 
 export function OfflineBanner() {
-  const { isConnected } = useConvexConnectionState();
-  if (isConnected) return null;
+  const { isWebSocketConnected } = useConvexConnectionState();
+  if (isWebSocketConnected) return null;
 
   return (
     <div className="fixed top-0 inset-x-0 z-50 flex items-center justify-center py-2 px-4 bg-yellow-500/10 border-b border-yellow-500/20">
