@@ -1,5 +1,6 @@
 import { mutation, query } from './_generated/server';
 import { v } from 'convex/values';
+import { calculateOneRepMax } from './lib/oneRepMax';
 
 export const listForSession = query({
   args: { sessionId: v.id('workoutSessions') },
@@ -34,7 +35,6 @@ export const add = mutation({
       loggedAt: Date.now(),
     });
 
-    const { calculateOneRepMax } = await import('./lib/oneRepMax');
     const { value, source, formula } = calculateOneRepMax(args.weight, args.reps);
 
     const existing = await ctx.db
@@ -69,8 +69,6 @@ export const remove = mutation({
     if (!set) return;
 
     await ctx.db.delete(id);
-
-    const { calculateOneRepMax } = await import('./lib/oneRepMax');
 
     const orms = await ctx.db
       .query('oneRepMaxes')
