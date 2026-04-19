@@ -1,7 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(node *)",
+      "Bash(rm /d/Dev/workout-tracker/src/routes/about.tsx /d/Dev/workout-tracker/src/components/Header.tsx /d/Dev/workout-tracker/src/components/Footer.tsx /d/Dev/workout-tracker/src/components/ThemeToggle.tsx)",
+      "Bash(git init *)"
     ]
   }
 }
