@@ -14,8 +14,8 @@
     "format": "biome format --write .",
     "docker:build-local": "npm run build && docker build -t workout-tracker:dev .",
     "docker:build": "npm run build && docker build -t workout-tracker:$(git describe --tags --always) .",
-    "docker:tag": "docker tag workout-tracker:$(git describe --tags --always) ghcr.io/applelent/workout-tracker:$(git describe --tags --always)",
-    "docker:push": "docker push ghcr.io/applelent/workout-tracker:$(git describe --tags --always)",
+    "docker:tag": "docker tag workout-tracker:$(git describe --tags --always) ghcr.io/appelent/workout-tracker:$(git describe --tags --always)",
+    "docker:push": "docker push ghcr.io/appelent/workout-tracker:$(git describe --tags --always)",
     "docker:publish": "npm run docker:build && npm run docker:tag && npm run docker:push"
   },
   "dependencies": {
